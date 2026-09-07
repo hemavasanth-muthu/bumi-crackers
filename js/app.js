@@ -139,9 +139,11 @@ document.addEventListener('DOMContentLoaded', async () => {
   // =========================================================================
   function switchView(viewName) {
     currentView = viewName;
-    window.location.hash = viewName === 'admin' ? '#admin' : '#showcase';
 
     if (viewName === 'admin') {
+      if (window.location.hash !== '#admin') {
+        window.location.hash = '#admin';
+      }
       customerViewSection.style.display = 'none';
       adminViewSection.style.display = 'block';
       customerHeaderActions.style.display = 'none';
@@ -150,6 +152,12 @@ document.addEventListener('DOMContentLoaded', async () => {
       loadAdminProducts();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
+      // Completely strip #admin from the URL address bar so reloading stays on home page!
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+      } else {
+        window.location.hash = '';
+      }
       adminViewSection.style.display = 'none';
       customerViewSection.style.display = 'block';
       adminHeaderActions.style.display = 'none';
@@ -184,6 +192,14 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (adminPasscodeModal) {
       adminPasscodeModal.classList.remove('active');
       adminPasscodeModal.setAttribute('aria-hidden', 'true');
+    }
+    // Remove #admin from URL if modal was closed without authentication
+    if (!isAdminAuthenticated && window.location.hash === '#admin') {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, document.title, window.location.pathname + window.location.search);
+      } else {
+        window.location.hash = '';
+      }
     }
   };
 
@@ -265,12 +281,19 @@ document.addEventListener('DOMContentLoaded', async () => {
   }
 
   if (btnSwitchToCustomer) {
-    btnSwitchToCustomer.addEventListener('click', () => switchView('customer'));
+    btnSwitchToCustomer.addEventListener('click', () => {
+      isAdminAuthenticated = false;
+      showToast('Returned to customer catalogue', 'info');
+      switchView('customer');
+    });
   }
 
   if (navLogoBtn) {
     navLogoBtn.addEventListener('click', (e) => {
       e.preventDefault();
+      if (currentView === 'admin') {
+        isAdminAuthenticated = false;
+      }
       switchView('customer');
     });
   }
@@ -282,6 +305,20 @@ document.addEventListener('DOMContentLoaded', async () => {
       switchView('customer');
     });
   }
+
+  // Listen for browser back / forward navigation
+  window.addEventListener('hashchange', () => {
+    if (window.location.hash === '#admin') {
+      if (isAdminAuthenticated) {
+        switchView('admin');
+      } else {
+        window.openAdminPasscodeModal();
+      }
+    } else if (currentView === 'admin') {
+      isAdminAuthenticated = false;
+      switchView('customer');
+    }
+  });
 
   // =========================================================================
   // STORE SETTINGS & CONTACTS INIT
