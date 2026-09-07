@@ -146,6 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       adminViewSection.style.display = 'block';
       customerHeaderActions.style.display = 'none';
       adminHeaderActions.style.display = 'flex';
+      if (floatingCartBtn) floatingCartBtn.style.display = 'none';
       loadAdminProducts();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     } else {
@@ -153,6 +154,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       customerViewSection.style.display = 'block';
       adminHeaderActions.style.display = 'none';
       customerHeaderActions.style.display = 'flex';
+      if (floatingCartBtn) floatingCartBtn.style.display = 'flex';
       loadCustomerProducts();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }

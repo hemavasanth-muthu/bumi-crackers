@@ -30,13 +30,13 @@
        ========================================================================= -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="#showcase" id="navLogoBtn" class="brand-logo-group">
+      <a href="#showcase" id="navLogoBtn" class="brand-logo-group" aria-label="Bumi Crackers Home">
         <img src="assets/images/logo.png" alt="பூமி பட்டாசு கடை Logo" class="brand-logo-img">
         <div class="brand-texts">
           <h1 class="brand-title-ta ta-font" id="headerStoreName">பூமி பட்டாசு கடை</h1>
           <div class="brand-sub">
             <span id="headerStoreSub">Bumi Crackers</span>
-            <span>•</span>
+            <span class="brand-sub-sep">•</span>
             <span class="location-tag" id="headerLocation">📍 வெள்ளையாபுரம்</span>
           </div>
         </div>
@@ -45,35 +45,39 @@
       <!-- View Navigation & Actions -->
       <div class="header-actions">
         <!-- Customer view actions -->
-        <div id="customerHeaderActions" style="display: flex; align-items: center; gap: 10px;">
+        <div id="customerHeaderActions" class="customer-header-group">
           <button id="btnOpenCart" class="btn-header-cart" title="View Shopping Cart" aria-label="View Shopping Cart">
             <span class="cart-icon">🛒</span>
             <span class="cart-label hide-mobile">Cart</span>
             <span id="cartBadge" class="cart-badge">0</span>
           </button>
-          <a id="headerWhatsappBtn" class="btn-header-whatsapp" href="https://wa.me/917358800563" target="_blank" rel="noopener noreferrer">
-            <span>💬</span>
+          <a id="headerWhatsappBtn" class="btn-header-whatsapp" href="https://wa.me/917358800563" target="_blank" rel="noopener noreferrer" title="Chat on WhatsApp">
+            <span class="btn-header-icon">💬</span>
             <span class="hide-mobile">WhatsApp</span>
           </a>
           <button id="btnSwitchToAdmin" class="btn-admin-link" title="Open Admin Product Management">
-            <span>⚙️</span>
-            <span>Admin</span>
+            <span class="btn-header-icon">⚙️</span>
+            <span class="hide-mobile-sm">Admin</span>
           </button>
         </div>
 
         <!-- Admin view actions -->
-        <div id="adminHeaderActions" style="display: none; align-items: center; gap: 10px;">
-          <button id="btnSwitchToCustomer" class="btn-admin-action btn-secondary-action">
-            <span>👁️ Customer View</span>
+        <div id="adminHeaderActions" class="admin-header-group" style="display: none;">
+          <button id="btnSwitchToCustomer" class="btn-admin-action btn-secondary-action" title="Switch to Customer Store View">
+            <span>👁️</span>
+            <span class="admin-action-text">Store View</span>
           </button>
-          <button id="btnAdminOpenSettings" class="btn-admin-action btn-secondary-action hide-mobile">
-            <span>⚙️ Settings</span>
+          <button id="btnAdminOpenSettings" class="btn-admin-action btn-secondary-action hide-mobile" title="Open Store Settings">
+            <span>⚙️</span>
+            <span class="admin-action-text">Settings</span>
           </button>
-          <button id="btnAdminAddNewProduct" class="btn-admin-action btn-primary-action">
-            <span>➕ Add Product</span>
+          <button id="btnAdminAddNewProduct" class="btn-admin-action btn-primary-action" title="Add New Product">
+            <span>➕</span>
+            <span class="admin-action-text">Add Product</span>
           </button>
           <button id="btnAdminLogout" class="btn-admin-action btn-secondary-action" title="Lock Admin Panel">
-            <span>🔒 Exit</span>
+            <span>🔒</span>
+            <span class="hide-mobile-sm">Exit</span>
           </button>
         </div>
       </div>
