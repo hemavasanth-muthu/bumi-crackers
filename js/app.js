@@ -687,7 +687,6 @@ Please share the details and availability.`;
       const qty = parseInt(newQty, 10);
       if (qty <= 0) {
         cart.splice(index, 1);
-        showToast('Product removed from cart', 'info');
       } else {
         cart[index].quantity = qty;
       }
@@ -707,7 +706,6 @@ Please share the details and availability.`;
       let cart = this.getCart();
       cart = cart.filter(item => item.productId !== productId);
       this.saveCart(cart);
-      showToast('Product removed from cart', 'info');
     },
 
     clearCart() {
