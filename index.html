@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>பூமி பட்டாசு கடை | Bumi Crackers - Sivakasi Wholesale Fireworks</title>
+  <meta name="description" content="Official Sivakasi firecracker product catalogue. 172+ Sparklers, Flower Pots, Ground Chakkars, Rockets, Garlands, Multi Colour Shots & Diwali Gift Boxes at direct wholesale prices. Chat on WhatsApp to order!">
+  <meta name="keywords" content="Bumi Crackers, பூமி பட்டாசு கடை, Sivakasi Crackers, Diwali Crackers, Fireworks catalogue, Wholesale crackers, Tamil Nadu crackers, வெள்ளையாபுரம்">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo.png">
+
+  <!-- Google Fonts: Outfit, Poppins, Mukta Malar (Tamil) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@500;700;800&family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Unified Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+
+  <!-- Background Particle Sparkle Canvas -->
+  <canvas id="sparkleCanvas" class="sparkle-canvas"></canvas>
+
+  <!-- =========================================================================
+       GLOBAL UNIFIED HEADER
+       ========================================================================= -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#showcase" id="navLogoBtn" class="brand-logo-group">
+        <img src="assets/images/logo.png" alt="பூமி பட்டாசு கடை Logo" class="brand-logo-img">
+        <div class="brand-texts">
+          <h1 class="brand-title-ta ta-font" id="headerStoreName">பூமி பட்டாசு கடை</h1>
+          <div class="brand-sub">
+            <span id="headerStoreSub">Bumi Crackers</span>
+            <span>•</span>
+            <span class="location-tag" id="headerLocation">📍 வெள்ளையாபுரம்</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- View Navigation & Actions -->
+      <div class="header-actions">
+        <!-- Customer view actions -->
+        <div id="customerHeaderActions" style="display: flex; align-items: center; gap: 10px;">
+          <button id="btnOpenCart" class="btn-header-cart" title="View Shopping Cart" aria-label="View Shopping Cart">
+            <span class="cart-icon">🛒</span>
+            <span class="cart-label hide-mobile">Cart</span>
+            <span id="cartBadge" class="cart-badge">0</span>
+          </button>
+          <a id="headerWhatsappBtn" class="btn-header-whatsapp" href="https://wa.me/917358800563" target="_blank" rel="noopener noreferrer">
+            <span>💬</span>
+            <span class="hide-mobile">WhatsApp</span>
+          </a>
+          <button id="btnSwitchToAdmin" class="btn-admin-link" title="Open Admin Product Management">
+            <span>⚙️</span>
+            <span>Admin</span>
+          </button>
+        </div>
+
+        <!-- Admin view actions -->
+        <div id="adminHeaderActions" style="display: none; align-items: center; gap: 10px;">
+          <button id="btnSwitchToCustomer" class="btn-admin-action btn-secondary-action">
+            <span>👁️ Customer View</span>
+          </button>
+          <button id="btnAdminOpenSettings" class="btn-admin-action btn-secondary-action hide-mobile">
+            <span>⚙️ Settings</span>
+          </button>
+          <button id="btnAdminAddNewProduct" class="btn-admin-action btn-primary-action">
+            <span>➕ Add Product</span>
+          </button>
+          <button id="btnAdminLogout" class="btn-admin-action btn-secondary-action" title="Lock Admin Panel">
+            <span>🔒 Exit</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       VIEW 1: CUSTOMER PRODUCT SHOWCASE VIEW (Default)
+       ========================================================================= -->
+  <div id="customerViewSection">
+    <main class="container">
+
+      <!-- Hero Banner Section -->
+      <section class="hero-section">
+        <div class="hero-banner">
+          <img src="assets/images/logo.png" alt="Bumi Crackers Official Logo" class="hero-logo-display">
+
+          <div class="hero-content">
+            <div class="hero-ribbon-tag">
+              <span>⭐ சிவகாசி நேரடி தயாரிப்பு விலை ⭐</span>
+            </div>
+            <h2 class="hero-heading">
+              Brighten Your Festivities with <br>
+              <span class="highlight">பூமி பட்டாசு கடை (Bumi Crackers)</span>
+            </h2>
+            
+            <div class="hero-tagline-green ta-font">
+              எங்களிடம் அனைத்து விதமான பட்டாசுகள் மொத்தமாகவும் சில்லறையாகவும் சிவகாசி விலையில் கிடைக்கும்.
+            </div>
+
+            <div class="hero-badges-row">
+              <div class="pill-feature truck">🚚 Online Delivery Available</div>
+              <div class="pill-feature">🌿 CSIR-NEERI Green Certified</div>
+              <div class="pill-feature">📦 172+ Cracker Varieties</div>
+            </div>
+          </div>
+
+          <div class="hero-contact-card">
+            <span class="contact-card-badge">📞 Call & WhatsApp</span>
+            <span class="hero-contact-phone" id="heroPhoneText">7358800563 / 93455 69059</span>
+            <a id="heroWhatsappBtn" class="btn-hero-order" href="https://wa.me/917358800563" target="_blank" rel="noopener noreferrer">
+              <span>💬 Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Search, Sort & Categories Filter Section -->
+      <section class="catalogue-controls-section" id="catalogue">
+        <div class="search-and-sort-bar">
+          <div class="search-box-wrapper">
+            <span class="search-icon">🔍</span>
+            <input 
+              type="text" 
+              id="searchInput" 
+              class="search-input" 
+              placeholder="Search 172+ crackers by name (e.g. Sparklers, Flower Pots, Chakkars, 12 Shots, 1000 Wala, Gift Box)..."
+              autocomplete="off"
+            >
+            <button id="searchClearBtn" class="search-clear-btn" title="Clear Search">✕</button>
+          </div>
+
+          <div class="sort-select-wrapper">
+            <select id="sortSelect" class="sort-select">
+              <option value="featured">✨ Featured First</option>
+              <option value="price-low">💵 Price: Low to High</option>
+              <option value="price-high">💎 Price: High to Low</option>
+              <option value="item-no">🔢 Item Number (#001 to #172)</option>
+              <option value="name-az">🔤 Name: A to Z</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="category-pills-container" id="categoryPills">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Filter Count Summary Bar -->
+        <div class="catalog-stats-row">
+          <span id="filterSummary">Showing All 172 Products</span>
+          <strong id="totalCount">172 Crackers</strong>
+        </div>
+      </section>
+
+      <!-- Customer Product Grid Container -->
+      <section class="product-grid" id="productGrid">
+        <!-- Rendered by app.js -->
+      </section>
+
+    </main>
+
+    <!-- Customer Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo-row">
+            <img src="assets/images/logo.png" alt="Logo" class="footer-logo-img">
+            <h3 class="ta-font">பூமி பட்டாசு கடை</h3>
+          </div>
+          <p>Bumi Crackers - Direct Sivakasi factory wholesale pricing catalogue. 172+ authentic Diwali firecrackers including Sparklers, Pots, Chakkars, Rockets, Multi Colour Sky Shots & Family Gift Boxes.</p>
+          <div class="pill-feature truck" style="display: inline-flex; width: fit-content;">🚚 Fast Online Delivery Across Tamil Nadu & India</div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Popular Categories</h4>
+          <ul class="footer-links">
+            <li><a href="#catalogue" onclick="setCategory('sparklers')">🪄 Sparklers (கம்பி மத்தாப்பு)</a></li>
+            <li><a href="#catalogue" onclick="setCategory('flowerpots')">🌋 Flower Pots (பூந்தொட்டி)</a></li>
+            <li><a href="#catalogue" onclick="setCategory('chakkars')">🌀 Ground Chakkars (சக்கரம்)</a></li>
+            <li><a href="#catalogue" onclick="setCategory('shots')">🎆 Multi Colour Shots (ஸ்கை ஷாட்ஸ்)</a></li>
+            <li><a href="#catalogue" onclick="setCategory('giftbox')">🎁 Diwali Gift Boxes (கிப்ட் பாக்ஸ்)</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact & Location</h4>
+          <div class="footer-contact-item">📍 வெள்ளையாபுரம் (Vellayapuram)</div>
+          <div class="footer-contact-item">📞 7358800563 / 93455 69059</div>
+          <div class="footer-contact-item">💬 WhatsApp Order Enquiries 24/7</div>
+          <div style="margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <a id="footerWhatsappBtn" class="btn-card-whatsapp" style="display: inline-flex; width: auto; padding: 10px 18px;" href="https://wa.me/917358800563" target="_blank" rel="noopener noreferrer">
+              <span>💬 WhatsApp Us</span>
+            </a>
+            <button id="btnFooterAdmin" class="btn-admin-link" style="display: inline-flex; padding: 8px 16px;">
+              <span>⚙️ Admin Portal</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <div>© 2026 பூமி பட்டாசு கடை (Bumi Crackers). All Rights Reserved.</div>
+        <div>
+          <a href="javascript:void(0)" onclick="switchToAdmin()" style="color: var(--text-secondary);">⚙️ Admin Product Management</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- =========================================================================
+       VIEW 2: ADMIN MANAGEMENT VIEW (Combined in the same page)
+       ========================================================================= -->
+  <div id="adminViewSection" style="display: none;">
+    <div class="admin-container">
+
+      <!-- Admin Top Toolbar & Welcome Banner -->
+      <div style="background: linear-gradient(135deg, #101e40, #09132b); border: 2px solid var(--border-gold); border-radius: 16px; padding: 20px 24px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <div>
+          <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 4px;">
+            <span class="admin-badge">Admin Control Panel</span>
+            <h2 style="font-size: 1.3rem; margin: 0; color: #fff;">பூமி பட்டாசு கடை - Product & Price Manager</h2>
+          </div>
+          <p style="font-size: 0.88rem; color: var(--text-secondary); margin: 0;">Add new firecrackers, edit wholesale Sivakasi pricing, update categories, and manage catalogue availability in real time.</p>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+          <button id="btnAdminQuickSettings" class="btn-admin-action btn-secondary-action">
+            <span>⚙️ Store & Firebase Settings</span>
+          </button>
+          <button id="btnAdminAddModalTop" class="btn-admin-action btn-primary-action">
+            <span>➕ Add New Product</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Admin Stats Summary Cards -->
+      <div class="admin-stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">📦</div>
+          <div>
+            <div class="stat-val" id="totalProductsCount">172</div>
+            <div class="stat-title">Total Products in Catalogue</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">✅</div>
+          <div>
+            <div class="stat-val" id="activeProductsCount">172</div>
+            <div class="stat-title">Active Live Products</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">🏷️</div>
+          <div>
+            <div class="stat-val" id="categoriesCount">16</div>
+            <div class="stat-title">Product Categories</div>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon">💬</div>
+          <div>
+            <div class="stat-val" style="font-size: 1.1rem; color: #25D366;">Direct WhatsApp</div>
+            <div class="stat-title">Manual Order Inquiries</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Products Table Card -->
+      <div class="admin-table-card">
+        <div class="table-toolbar">
+          <div>
+            <h3 style="font-size: 1.15rem; margin-bottom: 2px;">Firecracker Products Master Table</h3>
+            <p style="font-size: 0.82rem; color: var(--text-sub); margin: 0;">Click on Status to toggle Live / Disabled, or ✏️ to update price & details.</p>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <input type="text" id="adminSearchInput" class="table-search-input" placeholder="Search item #, name or category...">
+            <select id="adminCategoryFilter" class="form-control" style="min-width: 180px;">
+              <option value="all">All Categories</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="table-responsive">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Product Details & Item #</th>
+                <th>Category</th>
+                <th>Sivakasi Price</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="productsTableBody">
+              <!-- Populated via admin controller -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 1: PRODUCT DETAILS MODAL (Customer View)
+       ========================================================================= -->
+  <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close dialog">✕</button>
+
+      <div class="modal-content-grid">
+        <div class="modal-media-col">
+          <div class="modal-image-wrapper">
+            <img id="modalProductImg" class="modal-product-img" src="" alt="Product Image">
+          </div>
+          <div style="background: rgba(0, 119, 0, 0.35); border: 1px solid rgba(0, 255, 0, 0.4); border-radius: var(--radius-sm); padding: 10px 14px; display: flex; align-items: center; gap: 8px; font-size: 0.84rem; color: #a7f3d0;">
+            <span>🌿</span>
+            <span>CSIR-NEERI Green Cracker Certified - Safe & Environmentally Approved.</span>
+          </div>
+        </div>
+
+        <div class="modal-info-col">
+          <div class="modal-header-meta">
+            <span class="modal-category-badge" id="modalCategoryBadge">Category</span>
+            <span class="badge-item-no" id="modalItemCode">#001</span>
+          </div>
+
+          <div class="modal-tamil-name ta-font" id="modalTamilName"></div>
+          <h2 class="modal-product-name" id="modalProductName">Product Name</h2>
+
+          <div class="modal-price-box">
+            <div>
+              <span style="font-size: 0.72rem; color: var(--color-emerald); font-weight: 800; display: block;">SIVAKASI WHOLESALE PRICE</span>
+              <div class="modal-price-value" id="modalPriceValue"><span>₹</span>0</div>
+            </div>
+            <div class="modal-discount-tag" id="modalDiscountTag">50% OFF MRP</div>
+          </div>
+
+          <h4 class="modal-desc-title">Product Description</h4>
+          <p class="modal-desc-text" id="modalDescText"></p>
+
+          <h4 class="modal-desc-title">Specifications & Packaging</h4>
+          <div class="specs-table" id="modalSpecsTable">
+            <!-- Populated dynamically -->
+          </div>
+
+          <!-- Quantity Selector & Realtime Subtotal -->
+          <div class="modal-qty-container">
+            <div class="modal-qty-label-group">
+              <span class="qty-control-label">Select Quantity:</span>
+              <span class="qty-subtotal-display">Subtotal: <strong id="modalSubtotalPreview">₹0.00</strong></span>
+            </div>
+            <div class="modal-qty-controls">
+              <div class="qty-stepper">
+                <button type="button" class="qty-btn" id="modalQtyMinus" aria-label="Decrease quantity">−</button>
+                <input type="number" id="modalQtyInput" class="qty-input" value="1" min="1" max="999">
+                <button type="button" class="qty-btn" id="modalQtyPlus" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" id="btnModalAddToCart" class="btn-modal-add-cart">
+                <span>🛒 Add to Cart</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="modal-actions-box">
+            <button type="button" class="modal-back-btn" id="modalBackBtn">
+              <span>← Continue Shopping</span>
+            </button>
+            <a id="modalWhatsappBtn" class="btn-modal-whatsapp" href="#" target="_blank" rel="noopener noreferrer">
+              <span>💬 Direct WhatsApp Enquiry</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 2: SHOPPING CART & WHATSAPP ORDER MODAL
+       ========================================================================= -->
+  <div class="cart-modal-overlay" id="cartModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="cart-modal-dialog">
+      <div class="cart-header">
+        <div class="cart-header-title">
+          <h3>🛒 Shopping Cart <span class="ta-font" style="font-size: 0.95rem; color: var(--color-gold);">(பட்டாசு கூடை)</span></h3>
+          <span class="cart-items-count-badge" id="cartHeaderSummary">0 Items</span>
+        </div>
+        <button class="cart-close-btn" id="btnCloseCart" aria-label="Close cart">✕</button>
+      </div>
+
+      <!-- Cart Scrollable Body Area -->
+      <div class="cart-scroll-body" id="cartItemsWrapper">
+        <!-- Empty Cart State -->
+        <div class="cart-empty-state" id="cartEmptyState" style="display: none;">
+          <div class="empty-cart-icon">🛒</div>
+          <h4>Your Shopping Cart is Empty</h4>
+          <p>Browse our 172+ authentic Sivakasi firecrackers catalogue and add items to your cart.</p>
+          <button type="button" class="btn-cart-browse" id="btnEmptyBrowse">
+            <span>🎆 Browse Catalogue</span>
+          </button>
+        </div>
+
+        <!-- Cart Items List Container -->
+        <div class="cart-items-list" id="cartItemsList">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+
+      <!-- Cart Calculation Footer (Pinned to Bottom) -->
+      <div class="cart-footer" id="cartFooter">
+        <div class="cart-calc-box">
+          <div class="calc-row">
+            <span class="calc-label">Total Items (மொத்த பட்டாசுகள்):</span>
+            <strong class="calc-val" id="cartTotalQty">0 Items</strong>
+          </div>
+          <div class="calc-divider"></div>
+          <div class="calc-row grand-total-row">
+            <div>
+              <span class="grand-label">Grand Total:</span>
+              <span class="grand-sublabel ta-font">மொத்த தொகை</span>
+            </div>
+            <strong class="grand-val" id="cartGrandTotal">₹0.00</strong>
+          </div>
+        </div>
+
+        <div class="cart-actions-row">
+          <button type="button" class="btn-continue-shopping" id="btnContinueShopping">
+            <span>← Continue Shopping</span>
+          </button>
+          <button type="button" class="btn-whatsapp-order" id="btnWhatsappOrder">
+            <span>💬 Order on WhatsApp</span>
+          </button>
+        </div>
+
+        <div class="cart-security-badge">
+          <span>✅ No payment needed online. Order details are automatically formatted and sent to the seller on WhatsApp to verify and confirm.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL: ADMIN PASSCODE VERIFICATION MODAL
+       ========================================================================= -->
+  <div class="admin-modal-overlay" id="adminPasscodeModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="admin-modal-box passcode-modal-box">
+      <div class="modal-title-row">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <span style="font-size: 1.5rem;">🔒</span>
+          <div>
+            <h3 style="font-size: 1.15rem; color: #fff; margin: 0;">Admin Portal Access</h3>
+            <span class="ta-font" style="font-size: 0.8rem; color: var(--color-gold);">நிர்வாகி கடவுச்சொல் சரிபார்ப்பு</span>
+          </div>
+        </div>
+        <button type="button" id="btnClosePasscodeModal" style="background: none; border: none; color: var(--text-sub); font-size: 1.25rem; cursor: pointer;">✕</button>
+      </div>
+
+      <form id="adminPasscodeForm" onsubmit="return false;">
+        <p style="font-size: 0.88rem; color: var(--text-secondary); margin-bottom: 16px; line-height: 1.5;">
+          Please enter the store administrator password to manage products, pricing, and catalogue:
+        </p>
+
+        <div class="form-group" style="margin-bottom: 12px;">
+          <label for="adminPasscodeInput" style="color: var(--color-gold); font-size: 0.82rem; font-weight: 700; margin-bottom: 6px; display: block;">
+            Admin Password (கடவுச்சொல்):
+          </label>
+          <div style="position: relative; display: flex; align-items: center;">
+            <input 
+              type="password" 
+              id="adminPasscodeInput" 
+              class="form-control passcode-input-field" 
+              placeholder="Enter password..." 
+              autocomplete="current-password"
+              required
+              style="width: 100%; padding-right: 42px; font-size: 1rem;"
+            >
+            <button 
+              type="button" 
+              id="btnTogglePasscodeVisibility" 
+              class="btn-toggle-pwd" 
+              title="Show/Hide Password"
+              style="position: absolute; right: 8px; background: transparent; border: none; font-size: 1.1rem; cursor: pointer; color: var(--text-secondary); padding: 4px;"
+            >
+              👁️
+            </button>
+          </div>
+          <div id="passcodeErrorMsg" class="passcode-error-msg" style="display: none; color: var(--color-ruby-bright); font-size: 0.85rem; margin-top: 8px; font-weight: 600;"></div>
+        </div>
+
+        <div class="modal-form-actions" style="margin-top: 20px; display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" id="btnCancelPasscode" class="btn-admin-action btn-secondary-action">Cancel</button>
+          <button type="submit" id="btnSubmitPasscode" class="btn-admin-action btn-primary-action">
+            <span>Unlock Admin 🔓</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 3: ADD / EDIT PRODUCT MODAL (Admin)
+       ========================================================================= -->
+  <div class="admin-modal-overlay" id="adminProductModal">
+    <div class="admin-modal-box">
+      <div class="modal-title-row">
+        <h3 id="adminModalTitle" style="font-size: 1.25rem; color: #fff;">Add New Firecracker Product</h3>
+        <button id="btnCloseAdminModal" style="color: var(--text-sub); font-size: 1.2rem; cursor: pointer;">✕</button>
+      </div>
+
+      <form id="adminProductForm">
+        <input type="hidden" id="editProductId">
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="prodItemNo">Item # Number</label>
+            <input type="number" id="prodItemNo" class="form-control" placeholder="173" min="1">
+          </div>
+
+          <div class="form-group">
+            <label for="prodCategory">Category *</label>
+            <select id="prodCategory" class="form-control" required>
+              <!-- Populated dynamically -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="prodNameEn">Product Name (English) *</label>
+            <input type="text" id="prodNameEn" class="form-control" placeholder="e.g. 10 CM Electric Sparklers" required>
+          </div>
+
+          <div class="form-group">
+            <label for="prodNameTa">Product Name (Tamil)</label>
+            <input type="text" id="prodNameTa" class="form-control" placeholder="e.g. 10செ. சாதா கம்பி">
+          </div>
+
+          <div class="form-group">
+            <label for="prodPrice">Sivakasi Wholesale Price (₹) *</label>
+            <input type="number" id="prodPrice" class="form-control" step="0.01" placeholder="10.00" min="1" required>
+          </div>
+
+          <div class="form-group">
+            <label for="prodOriginalPrice">Original MRP (₹)</label>
+            <input type="number" id="prodOriginalPrice" class="form-control" step="0.01" placeholder="20.00" min="1">
+          </div>
+
+          <div class="form-group">
+            <label for="prodPackaging">Packaging / Unit (e.g. 10 Pcs/Box, 1 Box, 1 Pkt)</label>
+            <input type="text" id="prodPackaging" class="form-control" placeholder="10 Pcs/Box">
+          </div>
+
+          <div class="form-group">
+            <label for="prodSoundLevel">Sound / Visual Effect</label>
+            <input type="text" id="prodSoundLevel" class="form-control" placeholder="e.g. Sparkle / Aerial Boom / Sharp Sound">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="prodImageUrl">Product Image URL</label>
+            <input type="url" id="prodImageUrl" class="form-control" placeholder="https://example.com/cracker.jpg">
+            
+            <div style="margin-top: 8px; display: flex; align-items: center; gap: 14px;">
+              <span style="font-size: 0.8rem; color: var(--text-sub);">Or upload image file:</span>
+              <input type="file" id="prodImageFileInput" accept="image/*" style="font-size: 0.85rem; color: var(--text-sub);">
+            </div>
+            
+            <div style="margin-top: 10px;">
+              <img id="prodImagePreview" src="assets/images/logo.png" alt="Preview" style="width: 100px; height: 75px; object-fit: cover; border-radius: 8px; border: 1px solid var(--admin-border);">
+            </div>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="prodDescription">Product Description</label>
+            <textarea id="prodDescription" class="form-control" rows="3" placeholder="Describe the festive sparkler effects, colours and sound..."></textarea>
+          </div>
+
+          <div class="form-group full-width">
+            <label for="prodSafetyDistance">Recommended Safety Distance</label>
+            <input type="text" id="prodSafetyDistance" class="form-control" placeholder="e.g. 5 - 15 Meters Outdoors">
+          </div>
+
+          <div class="form-group full-width" style="display: flex; flex-direction: row; gap: 24px; margin-top: 6px;">
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; text-transform: none;">
+              <input type="checkbox" id="prodIsActive" checked>
+              <span>Active in Customer Catalogue</span>
+            </label>
+            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; text-transform: none;">
+              <input type="checkbox" id="prodIsFeatured">
+              <span>Show in Featured Section</span>
+            </label>
+          </div>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" id="btnCancelAdminModal" class="btn-admin-action btn-secondary-action">Cancel</button>
+          <button type="submit" class="btn-admin-action btn-primary-action">Save Product</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       MODAL 4: STORE SETTINGS & FIREBASE CONFIG MODAL (Admin)
+       ========================================================================= -->
+  <div class="admin-modal-overlay" id="adminSettingsModal">
+    <div class="admin-modal-box">
+      <div class="modal-title-row">
+        <h3 style="font-size: 1.25rem; color: #fff;">Store & Firebase Settings</h3>
+        <button id="btnCloseSettingsModal" style="color: var(--text-sub); font-size: 1.2rem; cursor: pointer;">✕</button>
+      </div>
+
+      <form id="adminSettingsForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="settingsStoreNameTa">Brand Name (Tamil)</label>
+            <input type="text" id="settingsStoreNameTa" class="form-control" placeholder="பூமி பட்டாசு கடை">
+          </div>
+
+          <div class="form-group">
+            <label for="settingsStoreNameEn">Brand Name (English)</label>
+            <input type="text" id="settingsStoreNameEn" class="form-control" placeholder="Bumi Crackers">
+          </div>
+
+          <div class="form-group">
+            <label for="settingsWhatsapp">Primary WhatsApp (Country Code + Number)</label>
+            <input type="text" id="settingsWhatsapp" class="form-control" placeholder="917358800563">
+          </div>
+
+          <div class="form-group">
+            <label for="settingsPhone">Direct Phone Number(s)</label>
+            <input type="text" id="settingsPhone" class="form-control" placeholder="7358800563 / 93455 69059">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="settingsLocation">Location / Address</label>
+            <input type="text" id="settingsLocation" class="form-control" placeholder="வெள்ளையாபுரம் (Vellayapuram)">
+          </div>
+
+          <div class="form-group full-width">
+            <label for="settingsFirebaseJson">Firebase Project Config (Optional - JSON format)</label>
+            <textarea id="settingsFirebaseJson" class="form-control" rows="5" placeholder='{\n  "apiKey": "...",\n  "authDomain": "...",\n  "projectId": "...",\n  "storageBucket": "..."\n}'></textarea>
+            <span style="font-size: 0.78rem; color: var(--text-sub); margin-top: 4px;">Paste your Firebase Console configuration here to sync directly with Firestore database.</span>
+          </div>
+
+          <div class="form-group full-width" style="margin-top: 10px; padding: 14px; background: rgba(255, 221, 0, 0.1); border: 1px dashed var(--admin-accent); border-radius: 8px;">
+            <h4 style="font-size: 0.88rem; color: var(--admin-accent); margin-bottom: 4px;">Bulk Restore Catalogue</h4>
+            <p style="font-size: 0.8rem; color: var(--text-sub); margin-bottom: 10px;">Restore all official 172 Sivakasi firecracker products and prices at any time.</p>
+            <button type="button" id="btnSeedDefaults" class="btn-admin-action btn-secondary-action" style="font-size: 0.82rem;">
+              ⚡ Restore Full 172-Product Sivakasi Catalogue
+            </button>
+          </div>
+        </div>
+
+        <div class="modal-form-actions">
+          <button type="button" id="btnCancelSettingsModal" class="btn-admin-action btn-secondary-action">Cancel</button>
+          <button type="submit" class="btn-admin-action btn-primary-action">Save Settings</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Floating Quick Cart & WhatsApp Buttons -->
+  <aside class="floating-quick-actions" aria-label="Quick Actions">
+    <button type="button" id="floatingCartBtn" class="floating-cart-btn" title="View Cart">
+      <span class="floating-cart-icon">🛒</span>
+      <span class="floating-cart-text">
+        <span class="floating-cart-label">Cart (<span id="floatingCartBadge">0</span>)</span>
+        <span class="floating-cart-amount" id="floatingCartTotal">₹0.00</span>
+      </span>
+    </button>
+  </aside>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- Unified App Scripts -->
+  <script src="js/config.js"></script>
+  <script src="js/firebase-service.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
