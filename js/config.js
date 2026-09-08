@@ -1,13 +1,13 @@
 /**
- * Bumi Crackers - Global Configuration & 172-Product Official Price List
+ * Boomi Crackers - Global Configuration & 172-Product Official Price List
  * பூமி பட்டாசு கடை - சிவகாசி விலை பட்டியல்
  * Location: வெள்ளையாபுரம் | WhatsApp: 7358800563, 93455 69059
  */
 
-const BUMI_CONFIG = {
+const BOOMI_CONFIG = {
   store: {
     name: "பூமி பட்டாசு கடை",
-    nameEn: "Bumi Crackers",
+    nameEn: "Boomi Crackers",
     tagline: "எங்களிடம் அனைத்து விதமான பட்டாசுகள் மொத்தமாகவும் சில்லறையாகவும் சிவகாசி விலையில் கிடைக்கும்",
     taglineEn: "Wholesale & Retail Fireworks at Direct Sivakasi Prices",
     location: "வெள்ளையாபுரம் (Vellayapuram)",
@@ -18,15 +18,15 @@ const BUMI_CONFIG = {
     secondaryWhatsapp: "919345569059",
     logoPath: "assets/images/logo.png",
     currency: "₹",
-    adminPasscode: "bumi123"
+    adminPasscode: "boomi123"
   },
 
   // Firebase Configuration
   firebase: {
     apiKey: "AIzaSyDummyKeyForShowcaseDemo12345",
-    authDomain: "bumi-crackers.firebaseapp.com",
-    projectId: "bumi-crackers",
-    storageBucket: "bumi-crackers.appspot.com",
+    authDomain: "boomi-crackers.firebaseapp.com",
+    projectId: "boomi-crackers",
+    storageBucket: "boomi-crackers.appspot.com",
     messagingSenderId: "123456789012",
     appId: "1:123456789012:web:abcdef1234567890"
   },
@@ -140,7 +140,7 @@ const BUMI_CONFIG = {
   // Official 172 Products List
   initialProducts: [
   {
-    "productId": "bumi-001",
+    "productId": "boomi-001",
     "itemNo": 1,
     "name": "10 CM Electric Sparklers",
     "nameTa": "10ெச. சாதா கம்",
@@ -163,7 +163,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-002",
+    "productId": "boomi-002",
     "itemNo": 2,
     "name": "10 CM Colour Sparklers",
     "nameTa": "10ெச. கலர் கம்",
@@ -186,7 +186,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-003",
+    "productId": "boomi-003",
     "itemNo": 3,
     "name": "12 CM Electric Sparklers",
     "nameTa": "12ெச. எலக்ட்ரிக் கம்",
@@ -209,7 +209,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-004",
+    "productId": "boomi-004",
     "itemNo": 4,
     "name": "12 CM Colour Sparklers",
     "nameTa": "12ெச. கலர் கம்",
@@ -232,7 +232,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-005",
+    "productId": "boomi-005",
     "itemNo": 5,
     "name": "15 CM Electric Sparklers",
     "nameTa": "15ெச. எலக்ட்ரிக் கம்",
@@ -255,7 +255,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-006",
+    "productId": "boomi-006",
     "itemNo": 6,
     "name": "15 CM Colour Sparklers",
     "nameTa": "15ெச. கலர் கம்",
@@ -278,7 +278,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-007",
+    "productId": "boomi-007",
     "itemNo": 7,
     "name": "30 CM Electric Sparklers",
     "nameTa": "30ெச. எலக்ட்ரிக் கம்",
@@ -301,7 +301,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-008",
+    "productId": "boomi-008",
     "itemNo": 8,
     "name": "30 CM Colour Sparklers",
     "nameTa": "30ெச. கலர் கம்",
@@ -324,7 +324,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-009",
+    "productId": "boomi-009",
     "itemNo": 9,
     "name": "30 CM Red Sparklers",
     "nameTa": "30ெச. கப் கலர் கம்",
@@ -347,7 +347,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-010",
+    "productId": "boomi-010",
     "itemNo": 10,
     "name": "30 CM Green Sparklers",
     "nameTa": "30ெச. பச்ைச கலர் கம்",
@@ -370,7 +370,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-011",
+    "productId": "boomi-011",
     "itemNo": 11,
     "name": "50 CM Electric Sparklers",
     "nameTa": "50ெச. எலக்ட்ரிக்   கம்",
@@ -393,7 +393,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-012",
+    "productId": "boomi-012",
     "itemNo": 12,
     "name": "50 CM Colour Sparklers",
     "nameTa": "50ெச. கலர் கம்",
@@ -416,7 +416,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-013",
+    "productId": "boomi-013",
     "itemNo": 13,
     "name": "Umberlla  Sparklers",
     "nameTa": "அம்ேபர்ல ஸ்பார்க்ள்ர்ஸ்",
@@ -439,7 +439,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-014",
+    "productId": "boomi-014",
     "itemNo": 14,
     "name": "Flower Pots Big",
     "nameTa": "ச்சட் க்",
@@ -462,7 +462,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-015",
+    "productId": "boomi-015",
     "itemNo": 15,
     "name": "Flower Pots Special",
     "nameTa": "ச்சட் ஸ்சபஷல்",
@@ -485,7 +485,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-016",
+    "productId": "boomi-016",
     "itemNo": 16,
     "name": "Flower Pots Ashoka",
     "nameTa": "ச்சட் அெசாகா",
@@ -508,7 +508,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-017",
+    "productId": "boomi-017",
     "itemNo": 17,
     "name": "Colour Koti 3 Colour",
     "nameTa": "ச்சட் கலர் சகாட்",
@@ -531,7 +531,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-018",
+    "productId": "boomi-018",
     "itemNo": 18,
     "name": "Mega Colour Koti",
     "nameTa": "ெமகா கலர் ேகாட்",
@@ -554,7 +554,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-019",
+    "productId": "boomi-019",
     "itemNo": 19,
     "name": "Tri Colour Fountain",
     "nameTa": "ட்ைர கலர் ேபாண்ைடன்",
@@ -577,7 +577,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-020",
+    "productId": "boomi-020",
     "itemNo": 20,
     "name": "Mega Tri Colour Fountain / Jolly Jumps",
     "nameTa": "ஜா  ஜம்ப்ஸ்",
@@ -600,7 +600,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-021",
+    "productId": "boomi-021",
     "itemNo": 21,
     "name": "Mega Deluxe Pots",
     "nameTa": "ெமகா லக்ஸ் ச்சட்",
@@ -623,7 +623,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-022",
+    "productId": "boomi-022",
     "itemNo": 22,
     "name": "Ground Chakkars Big",
     "nameTa": "தைரச்சக்கரம்  க்",
@@ -646,7 +646,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-023",
+    "productId": "boomi-023",
     "itemNo": 23,
     "name": "Ground Chakkars Special",
     "nameTa": "தைரச்சக்கரம் ஸ்சபஷல்",
@@ -669,7 +669,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-024",
+    "productId": "boomi-024",
     "itemNo": 24,
     "name": "Ground Chakkars Deluxe",
     "nameTa": "தைரச்சக்கரம் லக்ஸ்",
@@ -692,7 +692,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-025",
+    "productId": "boomi-025",
     "itemNo": 25,
     "name": "Dicso Wheel",
     "nameTa": "ஸ்சகா ல்",
@@ -715,7 +715,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-026",
+    "productId": "boomi-026",
     "itemNo": 26,
     "name": "Dicso Wheel",
     "nameTa": "ஸ்சகா ல்",
@@ -738,7 +738,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-027",
+    "productId": "boomi-027",
     "itemNo": 27,
     "name": "1 1/2 Twinkling Star",
     "nameTa": "1 1/2\" சாட்ைட ஸ்டார்",
@@ -761,7 +761,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-028",
+    "productId": "boomi-028",
     "itemNo": 28,
     "name": "4'' Twinkling Star Deluxe 4\"",
     "nameTa": "சாட்ைட ஸ்டார்",
@@ -784,7 +784,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-029",
+    "productId": "boomi-029",
     "itemNo": 29,
     "name": "Selfie Stick",
     "nameTa": "ெசல்ஃ ஸ் க்",
@@ -807,7 +807,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-030",
+    "productId": "boomi-030",
     "itemNo": 30,
     "name": "Water Falls Candle",
     "nameTa": "வாட்டர் பால்ஸ் ேகண் ல்",
@@ -830,7 +830,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-031",
+    "productId": "boomi-031",
     "itemNo": 31,
     "name": "Popcorn Candle",
     "nameTa": "பாப்கார்ன் ேகண் ல்",
@@ -853,7 +853,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-032",
+    "productId": "boomi-032",
     "itemNo": 32,
     "name": "Wonder Candle",
     "nameTa": "ஒண்டர் ேகண் ல்",
@@ -876,7 +876,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-033",
+    "productId": "boomi-033",
     "itemNo": 33,
     "name": "2¾\"  Kuruvi Crackers",
     "nameTa": "2¾\"  ெவ",
@@ -899,7 +899,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-034",
+    "productId": "boomi-034",
     "itemNo": 34,
     "name": "3½\" Lakshmi Crackers",
     "nameTa": "3½\" யம் லட் ெவ",
@@ -922,7 +922,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-035",
+    "productId": "boomi-035",
     "itemNo": 35,
     "name": "4'' Lakshmi Crackers",
     "nameTa": "4\" லட் ெவ",
@@ -945,7 +945,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-036",
+    "productId": "boomi-036",
     "itemNo": 36,
     "name": "4'' Lakshmi Deluxe",
     "nameTa": "4\" லட் லக்ஸ்",
@@ -968,7 +968,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-037",
+    "productId": "boomi-037",
     "itemNo": 37,
     "name": "5'' Jalli Kattu",
     "nameTa": "5\" ஜல் க்கட்",
@@ -991,7 +991,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-038",
+    "productId": "boomi-038",
     "itemNo": 38,
     "name": "Red Bijili (100 Pcs)",
     "nameTa": "வப்",
@@ -1014,7 +1014,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-039",
+    "productId": "boomi-039",
     "itemNo": 39,
     "name": "Vari Bijili (100 Pcs)",
     "nameTa": "வரி",
@@ -1037,7 +1037,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-040",
+    "productId": "boomi-040",
     "itemNo": 40,
     "name": "Bomb / Colour Rocket",
     "nameTa": "பாம்/கலர்  ராக்ெகட்",
@@ -1060,7 +1060,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-041",
+    "productId": "boomi-041",
     "itemNo": 41,
     "name": "Lunik Rocket",
     "nameTa": "னிக் ராக்ெகட்",
@@ -1083,7 +1083,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-042",
+    "productId": "boomi-042",
     "itemNo": 42,
     "name": "Whistling / Musical Rocket",
     "nameTa": "ங்/ க்கல் ராக்ெகட்",
@@ -1106,7 +1106,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-043",
+    "productId": "boomi-043",
     "itemNo": 43,
     "name": "Bullet Bomb",
     "nameTa": "ல்ெலட் பாம்",
@@ -1129,7 +1129,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-044",
+    "productId": "boomi-044",
     "itemNo": 44,
     "name": "Hydro Bomb Green",
     "nameTa": "ைஹட்ெரா பாம்",
@@ -1152,7 +1152,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-045",
+    "productId": "boomi-045",
     "itemNo": 45,
     "name": "King of king Bomb Green",
     "nameTa": "ங் ஆப் ங் பாம் ன்",
@@ -1175,7 +1175,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-046",
+    "productId": "boomi-046",
     "itemNo": 46,
     "name": "Classic Bomb Green",
     "nameTa": "ளா க் பாம் ன்",
@@ -1198,7 +1198,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-047",
+    "productId": "boomi-047",
     "itemNo": 47,
     "name": "Agni Bomb / Digital Bomb / Mega Bomb",
     "nameTa": "அக்னி பாம் / ட்டல் பாம் / ெமகா பாம்",
@@ -1221,7 +1221,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-048",
+    "productId": "boomi-048",
     "itemNo": 48,
     "name": "28 Gaint Crackers",
     "nameTa": "28 ெஜய்ன்ட் ராக்கர்ஸ்",
@@ -1244,7 +1244,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-049",
+    "productId": "boomi-049",
     "itemNo": 49,
     "name": "56 Gaint Crackers",
     "nameTa": "56 ெஜய்ன்ட் ராக்கர்ஸ்",
@@ -1267,7 +1267,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-050",
+    "productId": "boomi-050",
     "itemNo": 50,
     "name": "24 Deluxe Crackers",
     "nameTa": "24 லக்ஸ் ராக்கர்ஸ்",
@@ -1290,7 +1290,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-051",
+    "productId": "boomi-051",
     "itemNo": 51,
     "name": "50 Deluxe Crackers",
     "nameTa": "50 லக்ஸ் ராக்கர்ஸ்",
@@ -1313,7 +1313,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-052",
+    "productId": "boomi-052",
     "itemNo": 52,
     "name": "100 Deluxe Crackers",
     "nameTa": "100 லக்ஸ் ராக்கர்ஸ்",
@@ -1336,7 +1336,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-053",
+    "productId": "boomi-053",
     "itemNo": 53,
     "name": "1 Star",
     "nameTa": "1 ஸ்டார்",
@@ -1359,7 +1359,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-054",
+    "productId": "boomi-054",
     "itemNo": 54,
     "name": "2 Star",
     "nameTa": "2 ஸ்டார்",
@@ -1382,7 +1382,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-055",
+    "productId": "boomi-055",
     "itemNo": 55,
     "name": "5 Star",
     "nameTa": "5 ஸ்டார்",
@@ -1405,7 +1405,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-056",
+    "productId": "boomi-056",
     "itemNo": 56,
     "name": "10 Star",
     "nameTa": "10 ஸ்டார்",
@@ -1428,7 +1428,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-057",
+    "productId": "boomi-057",
     "itemNo": 57,
     "name": "1Star (PRIME)",
     "nameTa": "1 ஸ்டார் ( ைரம்)",
@@ -1451,7 +1451,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-058",
+    "productId": "boomi-058",
     "itemNo": 58,
     "name": "2 Star (PRIME)",
     "nameTa": "2 ஸ்டார்( ைரம்)",
@@ -1474,7 +1474,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-059",
+    "productId": "boomi-059",
     "itemNo": 59,
     "name": "5 Star (PRIME)",
     "nameTa": "5 ஸ்டார் ( ைரம்)",
@@ -1497,7 +1497,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-060",
+    "productId": "boomi-060",
     "itemNo": 60,
     "name": "10 Star (PRIME)",
     "nameTa": "10 ஸ்டார் ( ைரம்)",
@@ -1520,7 +1520,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-061",
+    "productId": "boomi-061",
     "itemNo": 61,
     "name": "Elecric Stone",
     "nameTa": "எலக்ட்ரிக் ஸ்சடான்",
@@ -1543,7 +1543,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-062",
+    "productId": "boomi-062",
     "itemNo": 62,
     "name": "Magic Pop",
     "nameTa": "மா க் பாப்",
@@ -1566,7 +1566,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-063",
+    "productId": "boomi-063",
     "itemNo": 63,
     "name": "Kit Kat (Big)",
     "nameTa": "ட்கட் க்",
@@ -1589,7 +1589,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-064",
+    "productId": "boomi-064",
     "itemNo": 64,
     "name": "Craazy Toons (Cartoon)",
     "nameTa": "ராஸ்ய் ல்ஸ்",
@@ -1612,7 +1612,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-065",
+    "productId": "boomi-065",
     "itemNo": 65,
     "name": "Snake Egg Big",
     "nameTa": "ஸ் ேசக் எக்க் க்",
@@ -1635,7 +1635,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-066",
+    "productId": "boomi-066",
     "itemNo": 66,
     "name": "7Up TIN",
     "nameTa": "7அப் ன்",
@@ -1658,7 +1658,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-067",
+    "productId": "boomi-067",
     "itemNo": 67,
     "name": "Orange TIN",
     "nameTa": "ைஆஞ்  ன்",
@@ -1681,7 +1681,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-068",
+    "productId": "boomi-068",
     "itemNo": 68,
     "name": "Chilli Pepper TIN",
     "nameTa": "ல்  சபப்பர் ன்",
@@ -1704,7 +1704,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-069",
+    "productId": "boomi-069",
     "itemNo": 69,
     "name": "Apple Juice TIN",
     "nameTa": "ஆப் ள்  ஜஸ்  ன்",
@@ -1727,7 +1727,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-070",
+    "productId": "boomi-070",
     "itemNo": 70,
     "name": "Royal/Peacock Fountain",
     "nameTa": "ம ல் ெதாைக",
@@ -1750,7 +1750,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-071",
+    "productId": "boomi-071",
     "itemNo": 71,
     "name": "Bada Peacock Fountain",
     "nameTa": "ெபரிய ம ல் ெதாைக",
@@ -1773,7 +1773,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-072",
+    "productId": "boomi-072",
     "itemNo": 72,
     "name": "Colour Candy Star (Lolly pop)",
     "nameTa": "கலர் ேகண் ஸ்டார்",
@@ -1796,7 +1796,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-073",
+    "productId": "boomi-073",
     "itemNo": 73,
     "name": "Peacock Feather",
     "nameTa": "காக் ஃெபதர்",
@@ -1819,7 +1819,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-074",
+    "productId": "boomi-074",
     "itemNo": 74,
     "name": "4 x 4 Wheel",
     "nameTa": "4x4 ல்",
@@ -1842,7 +1842,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-075",
+    "productId": "boomi-075",
     "itemNo": 75,
     "name": "6'' Water Queen",
     "nameTa": "6\"வாட்டர் ன்",
@@ -1865,7 +1865,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-076",
+    "productId": "boomi-076",
     "itemNo": 76,
     "name": "Gun Spark",
     "nameTa": "கன்  ஸ்பார்க்",
@@ -1888,7 +1888,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-077",
+    "productId": "boomi-077",
     "itemNo": 77,
     "name": "Helicopter / Drone",
     "nameTa": "ெஹகாப்டர் / ட்ேரான்",
@@ -1911,7 +1911,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-078",
+    "productId": "boomi-078",
     "itemNo": 78,
     "name": "Photo Flash",
     "nameTa": "ைகப்பட ளாஸ்க்",
@@ -1934,7 +1934,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-079",
+    "productId": "boomi-079",
     "itemNo": 79,
     "name": "Butterfly (Colour Changing)",
     "nameTa": "வண்ணத் ப் ச்",
@@ -1957,7 +1957,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-080",
+    "productId": "boomi-080",
     "itemNo": 80,
     "name": "Fruit Bazzar",
     "nameTa": "ப் ட் பஜார்",
@@ -1980,7 +1980,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-081",
+    "productId": "boomi-081",
     "itemNo": 81,
     "name": "Colour Smoke",
     "nameTa": "கலர் ஸ் ேமாக்",
@@ -2003,7 +2003,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-082",
+    "productId": "boomi-082",
     "itemNo": 82,
     "name": "Cocomelon",
     "nameTa": "ேசாேகாேமலான்",
@@ -2026,7 +2026,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-083",
+    "productId": "boomi-083",
     "itemNo": 83,
     "name": "Jolly Jumps",
     "nameTa": "ஜா  ஜ ம்ப்ஸ்",
@@ -2049,7 +2049,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-084",
+    "productId": "boomi-084",
     "itemNo": 84,
     "name": "Angry Birds",
     "nameTa": "அங் ரி பட்ஸ்",
@@ -2072,7 +2072,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-085",
+    "productId": "boomi-085",
     "itemNo": 85,
     "name": "Black Money",
     "nameTa": "ளாக் மணி",
@@ -2095,7 +2095,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-086",
+    "productId": "boomi-086",
     "itemNo": 86,
     "name": "White Money",
     "nameTa": "ஒய்ட் மணி",
@@ -2118,7 +2118,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-087",
+    "productId": "boomi-087",
     "itemNo": 87,
     "name": "Mobile Phone",
     "nameTa": "vivo - ெமாைபல் ேபான் - ேவா",
@@ -2141,7 +2141,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-088",
+    "productId": "boomi-088",
     "itemNo": 88,
     "name": "Mobile Phone",
     "nameTa": "Iphone - ெமாைபல் ேபான் - ஐேபான்",
@@ -2164,7 +2164,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-089",
+    "productId": "boomi-089",
     "itemNo": 89,
     "name": "Mobile Phone",
     "nameTa": "MI - ெமாைபல் ேபான் - எம்ஐ",
@@ -2187,7 +2187,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-090",
+    "productId": "boomi-090",
     "itemNo": 90,
     "name": "Mobile Phone",
     "nameTa": "samsung - ெமாைபல் ேபான் - சாம்சங்",
@@ -2210,7 +2210,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-091",
+    "productId": "boomi-091",
     "itemNo": 91,
     "name": "Bat & Ball / Fountain",
     "nameTa": "ெபட் & பால்  /  ேபாண்ைடன்",
@@ -2233,7 +2233,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-092",
+    "productId": "boomi-092",
     "itemNo": 92,
     "name": "Bambaram",
     "nameTa": "பம்பரம்",
@@ -2256,7 +2256,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-093",
+    "productId": "boomi-093",
     "itemNo": 93,
     "name": "Kuberan",
     "nameTa": "ேபரன்",
@@ -2279,7 +2279,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-094",
+    "productId": "boomi-094",
     "itemNo": 94,
     "name": "Flazer Show",
     "nameTa": "ள ர்  ேஷா",
@@ -2302,7 +2302,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-095",
+    "productId": "boomi-095",
     "itemNo": 95,
     "name": "Power Koti (5 Pcs)",
     "nameTa": "பவர்  ேகா",
@@ -2325,7 +2325,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-096",
+    "productId": "boomi-096",
     "itemNo": 96,
     "name": "Samosa Vedi",
     "nameTa": "சமோசா வெடி",
@@ -2348,7 +2348,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-097",
+    "productId": "boomi-097",
     "itemNo": 97,
     "name": "Blast Samosa Vedi",
     "nameTa": "பிளாஸ்ட் சமோசா வெடி",
@@ -2371,7 +2371,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-098",
+    "productId": "boomi-098",
     "itemNo": 98,
     "name": "Olay Vedi",
     "nameTa": "ஓல சவ",
@@ -2394,7 +2394,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-099",
+    "productId": "boomi-099",
     "itemNo": 99,
     "name": "7 Shot (5Pcs)",
     "nameTa": "7 சாட்  கலர்",
@@ -2417,7 +2417,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-100",
+    "productId": "boomi-100",
     "itemNo": 100,
     "name": "7 Shot (10 Pcs)",
     "nameTa": "7 சாட்  கலர்",
@@ -2440,7 +2440,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-101",
+    "productId": "boomi-101",
     "itemNo": 101,
     "name": "12 Shot Colour Rider",
     "nameTa": "12 சாட்  கலர்",
@@ -2463,7 +2463,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-102",
+    "productId": "boomi-102",
     "itemNo": 102,
     "name": "25 Shot Colour Rider",
     "nameTa": "25 சாட்  கலர்",
@@ -2486,7 +2486,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-103",
+    "productId": "boomi-103",
     "itemNo": 103,
     "name": "50 Shot Colour Rider",
     "nameTa": "50 சாட்  கலர்",
@@ -2509,7 +2509,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-104",
+    "productId": "boomi-104",
     "itemNo": 104,
     "name": "30 Shot Multi Colour",
     "nameTa": "30 சாட் மல் கலர்",
@@ -2532,7 +2532,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-105",
+    "productId": "boomi-105",
     "itemNo": 105,
     "name": "60 Shot Multi Colour",
     "nameTa": "60 சாட் மல் கலர்",
@@ -2555,7 +2555,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-106",
+    "productId": "boomi-106",
     "itemNo": 106,
     "name": "120 Shot Multi Colour",
     "nameTa": "120 சாட் மல் கலர்",
@@ -2578,7 +2578,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-107",
+    "productId": "boomi-107",
     "itemNo": 107,
     "name": "240 Shot Multi Colour",
     "nameTa": "240 சாட் மல் கலர்",
@@ -2601,7 +2601,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-108",
+    "productId": "boomi-108",
     "itemNo": 108,
     "name": "500 Shot Multi Colour",
     "nameTa": "500 சாட் மல் கலர்",
@@ -2624,7 +2624,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-109",
+    "productId": "boomi-109",
     "itemNo": 109,
     "name": "30 Shot Multi Colour (Brand)",
     "nameTa": "30 சாட் மல் கலர்",
@@ -2647,7 +2647,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-110",
+    "productId": "boomi-110",
     "itemNo": 110,
     "name": "60 Shot Multi Colour (Brand)",
     "nameTa": "60 சாட் மல் கலர்",
@@ -2670,7 +2670,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-111",
+    "productId": "boomi-111",
     "itemNo": 111,
     "name": "120 Shot Multi Colour (Brand)",
     "nameTa": "120 சாட் மல் கலர்",
@@ -2693,7 +2693,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-112",
+    "productId": "boomi-112",
     "itemNo": 112,
     "name": "240 Shot Multi Colour (Brand)",
     "nameTa": "240 சாட் மல் கலர்",
@@ -2716,7 +2716,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-113",
+    "productId": "boomi-113",
     "itemNo": 113,
     "name": "1'' Arial Fancy Pipe Dory (Yellow)",
     "nameTa": "1\" ஏரியல் ேபன்",
@@ -2739,7 +2739,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-114",
+    "productId": "boomi-114",
     "itemNo": 114,
     "name": "1'' Arial Fancy Pipe Nemo (Red)",
     "nameTa": "1\" ஏரியல் ேபன்",
@@ -2762,7 +2762,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-115",
+    "productId": "boomi-115",
     "itemNo": 115,
     "name": "1'' Arial Fancy Pipe Moama (Blue)",
     "nameTa": "1\" ஏரியல் ேபன்",
@@ -2785,7 +2785,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-116",
+    "productId": "boomi-116",
     "itemNo": 116,
     "name": "1'' Arial Fancy Pipe Elena (Green)",
     "nameTa": "1\" ஏரியல் ேபன்",
@@ -2808,7 +2808,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-117",
+    "productId": "boomi-117",
     "itemNo": 117,
     "name": "2'' Arial Fancy Pipe (Red) Sunshine",
     "nameTa": "2\" ஏரியல் ேபன்",
@@ -2831,7 +2831,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-118",
+    "productId": "boomi-118",
     "itemNo": 118,
     "name": "2'' Arial Fancy Pipe (Green) Freefire",
     "nameTa": "2\" ஏரியல் ேபன்",
@@ -2854,7 +2854,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-119",
+    "productId": "boomi-119",
     "itemNo": 119,
     "name": "2'' Arial Fancy Pipe (White) Pubg",
     "nameTa": "2\" ஏரியல் ேபன்",
@@ -2877,7 +2877,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-120",
+    "productId": "boomi-120",
     "itemNo": 120,
     "name": "2'' Arial Fancy Pipe (Yellow) Cancy Crush",
     "nameTa": "2\" ஏரியல் ேபன்",
@@ -2900,7 +2900,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-121",
+    "productId": "boomi-121",
     "itemNo": 121,
     "name": "2'' Arial Fancy Pipe",
     "nameTa": "2\" ஏரியல் சபன் (3 Pcs)",
@@ -2923,7 +2923,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-122",
+    "productId": "boomi-122",
     "itemNo": 122,
     "name": "3'' 1/2 Arial Fancy Pipe (Green)",
     "nameTa": "3½\"ஏரியல் ேபன்",
@@ -2946,7 +2946,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-123",
+    "productId": "boomi-123",
     "itemNo": 123,
     "name": "3'' 1/2 Arial Fancy Pipe (White)",
     "nameTa": "3½\"ஏரியல் ேபன்",
@@ -2969,7 +2969,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-124",
+    "productId": "boomi-124",
     "itemNo": 124,
     "name": "3'' 1/2 Arial Fancy Pipe (Yellow)",
     "nameTa": "3½\"ஏரியல் ேபன்",
@@ -2992,7 +2992,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-125",
+    "productId": "boomi-125",
     "itemNo": 125,
     "name": "4'' Arial Fancy Pipe(Green)",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3015,7 +3015,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-126",
+    "productId": "boomi-126",
     "itemNo": 126,
     "name": "4'' Arial Fancy Pipe(White)",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3038,7 +3038,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-127",
+    "productId": "boomi-127",
     "itemNo": 127,
     "name": "4'' Arial Fancy Pipe(Yellow)",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3061,7 +3061,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-128",
+    "productId": "boomi-128",
     "itemNo": 128,
     "name": "4'' Arial Fancy Pipe(2 Pcs)",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3084,7 +3084,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-129",
+    "productId": "boomi-129",
     "itemNo": 129,
     "name": "4'' Nayagra Fancy Pipe",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3107,7 +3107,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-130",
+    "productId": "boomi-130",
     "itemNo": 130,
     "name": "4'' Arial Fancy Pipe (Double Ball)",
     "nameTa": "4\" ஏரியல் ேபன்",
@@ -3130,7 +3130,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-131",
+    "productId": "boomi-131",
     "itemNo": 131,
     "name": "5\" Fancy Pipe Bestie",
     "nameTa": "5\" ெபன்ஸ் ைபப் எஸ்",
@@ -3153,7 +3153,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-132",
+    "productId": "boomi-132",
     "itemNo": 132,
     "name": "Mini Pearl",
     "nameTa": "னி  யர்ல்",
@@ -3176,7 +3176,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-133",
+    "productId": "boomi-133",
     "itemNo": 133,
     "name": "Jasmine / Colour Changing",
     "nameTa": "ஜாஸ் ன்  / கலர்  சஜன் ங்",
@@ -3199,7 +3199,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-134",
+    "productId": "boomi-134",
     "itemNo": 134,
     "name": "Gudiya Mega Deluxe",
     "nameTa": "யா  ெசகா லக்ஸ்",
@@ -3222,7 +3222,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-135",
+    "productId": "boomi-135",
     "itemNo": 135,
     "name": "Robo Kids Red",
     "nameTa": "ேராேபா ட்ஸ் ெரட்",
@@ -3245,7 +3245,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-136",
+    "productId": "boomi-136",
     "itemNo": 136,
     "name": "Robo Kids Green",
     "nameTa": "ேராேபா ட்ஸ் ரீன்",
@@ -3268,7 +3268,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-137",
+    "productId": "boomi-137",
     "itemNo": 137,
     "name": "Robo Kids Gold",
     "nameTa": "ேராேபா ட்ஸ் ேகால்ட்",
@@ -3291,7 +3291,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-138",
+    "productId": "boomi-138",
     "itemNo": 138,
     "name": "Robo Kids Silver",
     "nameTa": "ேராேபா ட்ஸ் ல்வர்",
@@ -3314,7 +3314,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-139",
+    "productId": "boomi-139",
     "itemNo": 139,
     "name": "Robo Kids Red& Green",
     "nameTa": "ேராேபா ட்ஸ் ெரட்& ரீன்",
@@ -3337,7 +3337,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-140",
+    "productId": "boomi-140",
     "itemNo": 140,
     "name": "Kunfu Panda Red",
     "nameTa": "ங் ஃ பாண்டா ெரட்",
@@ -3360,7 +3360,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-141",
+    "productId": "boomi-141",
     "itemNo": 141,
     "name": "Kunfu Panda Green",
     "nameTa": "ங் ஃ பாண்டா ரீன்",
@@ -3383,7 +3383,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-142",
+    "productId": "boomi-142",
     "itemNo": 142,
     "name": "Kunfu Panda Gold",
     "nameTa": "ங் ஃ பாண்டா ேகால்ட்",
@@ -3406,7 +3406,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-143",
+    "productId": "boomi-143",
     "itemNo": 143,
     "name": "Kunfu Panda Silver",
     "nameTa": "ங் ஃ பாண்டா ல்வர்",
@@ -3429,7 +3429,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-144",
+    "productId": "boomi-144",
     "itemNo": 144,
     "name": "Kunfu Panda Red &Green",
     "nameTa": "ங் ஃ பாண்டா ெரட்& ரீன்",
@@ -3452,7 +3452,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-145",
+    "productId": "boomi-145",
     "itemNo": 145,
     "name": "OREO RED",
     "nameTa": "ஓரிேயா வப் (5 Pcs)",
@@ -3475,7 +3475,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-146",
+    "productId": "boomi-146",
     "itemNo": 146,
     "name": "OREO GREEN",
     "nameTa": "ஓரிேயா பச்ைச  (5 Pcs)",
@@ -3498,7 +3498,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-147",
+    "productId": "boomi-147",
     "itemNo": 147,
     "name": "OREO GOLD",
     "nameTa": "ஓரிேயா ேகால்ட் (5 Pcs)",
@@ -3521,7 +3521,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-148",
+    "productId": "boomi-148",
     "itemNo": 148,
     "name": "OREO SILVER",
     "nameTa": "ஓரிேயா ல்வர் (5 Pcs)",
@@ -3544,7 +3544,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-149",
+    "productId": "boomi-149",
     "itemNo": 149,
     "name": "OREO RED & GREEN",
     "nameTa": "ஓரிேயா வப் & பச்ைச  (5 Pcs)",
@@ -3567,7 +3567,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-150",
+    "productId": "boomi-150",
     "itemNo": 150,
     "name": "Shark Tale (Green)",
     "nameTa": "ஷார்ட்  தாேள  (5 Pcs)",
@@ -3590,7 +3590,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-151",
+    "productId": "boomi-151",
     "itemNo": 151,
     "name": "Dory (Yellow)",
     "nameTa": "ேடாரி (5 Pcs)",
@@ -3613,7 +3613,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-152",
+    "productId": "boomi-152",
     "itemNo": 152,
     "name": "Nemo (Red)",
     "nameTa": "நீேமா (5 Pcs)",
@@ -3636,7 +3636,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-153",
+    "productId": "boomi-153",
     "itemNo": 153,
     "name": "Moana (Blue)",
     "nameTa": "ேமானா   (5 Pcs)",
@@ -3659,7 +3659,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-154",
+    "productId": "boomi-154",
     "itemNo": 154,
     "name": "Baby Star Matches",
     "nameTa": "ேப   ஸ்டார் மட்சாஸ்",
@@ -3682,7 +3682,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-155",
+    "productId": "boomi-155",
     "itemNo": 155,
     "name": "Crystal Matches",
     "nameTa": "ரிஸ்டல் மட்சாஸ்",
@@ -3705,7 +3705,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-156",
+    "productId": "boomi-156",
     "itemNo": 156,
     "name": "Gem Tvsker Matches",
     "nameTa": "ேகம்  வ்ஸ் ர் மட்சாஸ்",
@@ -3728,7 +3728,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-157",
+    "productId": "boomi-157",
     "itemNo": 157,
     "name": "Hola Matches / Laptop",
     "nameTa": "ஹேலா மட்சாஸ்  (10 Pcs)",
@@ -3751,7 +3751,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-158",
+    "productId": "boomi-158",
     "itemNo": 158,
     "name": "(25 Items) Gift Box",
     "nameTa": "(25ஐட்டம்ஸ் ) ப்ட் பாக்ஸ்",
@@ -3774,7 +3774,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-159",
+    "productId": "boomi-159",
     "itemNo": 159,
     "name": "(30 Items) Gift Box",
     "nameTa": "(30ஐட்டம்ஸ் ) ப்ட் பாக்ஸ்",
@@ -3797,7 +3797,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-160",
+    "productId": "boomi-160",
     "itemNo": 160,
     "name": "(40 Items) Gift Box",
     "nameTa": "(40ஐட்டம்ஸ் ) ப்ட் பாக்ஸ்",
@@ -3820,7 +3820,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-161",
+    "productId": "boomi-161",
     "itemNo": 161,
     "name": "(50 Items) Gift Box",
     "nameTa": "(50ஐட்டம்ஸ் ) ப்ட் பாக்ஸ்",
@@ -3843,7 +3843,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-162",
+    "productId": "boomi-162",
     "itemNo": 162,
     "name": "(60 Items) Gift Box",
     "nameTa": "(60ஐட்டம்ஸ் ) ப்ட் பாக்ஸ்",
@@ -3866,7 +3866,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-163",
+    "productId": "boomi-163",
     "itemNo": 163,
     "name": "Gun",
     "nameTa": "1 (Ring Cap) - ரிங் ேகப் ப்பாக்",
@@ -3889,7 +3889,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-164",
+    "productId": "boomi-164",
     "itemNo": 164,
     "name": "Gun",
     "nameTa": "2 (Ring Cap) - ரிங் ேகப் ப்பாக்",
@@ -3912,7 +3912,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-165",
+    "productId": "boomi-165",
     "itemNo": 165,
     "name": "Gun",
     "nameTa": "3 (Ring Cap) - ரிங் ேகப் ப்பாக்",
@@ -3935,7 +3935,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-166",
+    "productId": "boomi-166",
     "itemNo": 166,
     "name": "Gun",
     "nameTa": "4 (Run Cap) - ரிங் ேகப் ப்பாக்",
@@ -3958,7 +3958,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-167",
+    "productId": "boomi-167",
     "itemNo": 167,
     "name": "Ring Cap",
     "nameTa": "ரிங் ேகப்",
@@ -3981,7 +3981,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-168",
+    "productId": "boomi-168",
     "itemNo": 168,
     "name": "Adiyal Paper Bomb(1/4 KG)",
     "nameTa": "அயாள் ேபப்பர் பாம்(1/4 KG)",
@@ -4004,7 +4004,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-169",
+    "productId": "boomi-169",
     "itemNo": 169,
     "name": "Adiyal Paper Bomb(1/2KG",
     "nameTa": "அயாள் ேபப்பர் பாம் (1/2KG]",
@@ -4027,7 +4027,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-170",
+    "productId": "boomi-170",
     "itemNo": 170,
     "name": "Adiyal Paper Bomb (1 KG)",
     "nameTa": "அயாள் ேபப்பர் பாம்(1 KG)",
@@ -4050,7 +4050,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-171",
+    "productId": "boomi-171",
     "itemNo": 171,
     "name": "Avatar (10 Pcs)",
     "nameTa": "அவதார்",
@@ -4073,7 +4073,7 @@ const BUMI_CONFIG = {
     "createdAt": "2026-09-07T00:00:00.000Z"
   },
   {
-    "productId": "bumi-172",
+    "productId": "boomi-172",
     "itemNo": 172,
     "name": "AGARBATHI",
     "nameTa": "அகர்பத்",
@@ -4098,5 +4098,7 @@ const BUMI_CONFIG = {
 ]
 };
 
-// Export configuration globally
-window.BUMI_CONFIG = BUMI_CONFIG;
+// Export configuration globally with Boomi branding & backward-compatible alias
+const BUMI_CONFIG = BOOMI_CONFIG;
+window.BOOMI_CONFIG = BOOMI_CONFIG;
+window.BUMI_CONFIG = BOOMI_CONFIG;

@@ -1,22 +1,27 @@
 /**
- * Bumi Crackers - Firebase & Data Service
+ * Boomi Crackers - Firebase & Data Service
  * Handles Firestore synchronization with resilient LocalStorage fallback
  */
 
-class BumiDataService {
+class BoomiDataService {
   constructor() {
-    this.storageKey = 'bumi_products_catalog';
-    this.configKey = 'bumi_store_settings';
-    this.firebaseConfigKey = 'bumi_firebase_custom_config';
+    this.storageKey = 'boomi_products_catalog';
+    this.configKey = 'boomi_store_settings';
+    this.firebaseConfigKey = 'boomi_firebase_custom_config';
     this.db = null;
     this.isFirebaseReady = false;
     this.init();
   }
 
+  getConfig() {
+    return window.BOOMI_CONFIG || window.BUMI_CONFIG;
+  }
+
   init() {
     // Check if custom Firebase config exists in localStorage
-    const customFbConfig = localStorage.getItem(this.firebaseConfigKey);
-    let activeFbConfig = BUMI_CONFIG.firebase;
+    const customFbConfig = localStorage.getItem(this.firebaseConfigKey) || localStorage.getItem('bumi_firebase_custom_config');
+    const cfg = this.getConfig();
+    let activeFbConfig = cfg ? cfg.firebase : null;
 
     if (customFbConfig) {
       try {
@@ -48,46 +53,58 @@ class BumiDataService {
   }
 
   ensureLocalSeedData() {
-    // Version key — increment to force-refresh localStorage when images/data change
-    const DATA_VERSION = 'v5-tamil-clean';
-    const storedVersion = localStorage.getItem('bumi_data_version');
+    const cfg = this.getConfig();
+    if (!cfg) return;
 
-    const existing = localStorage.getItem(this.storageKey);
+    // Version key — increment to force-refresh localStorage when images/data change
+    const DATA_VERSION = 'v6-boomi-brand';
+    const storedVersion = localStorage.getItem('boomi_data_version') || localStorage.getItem('bumi_data_version');
+
+    const existing = localStorage.getItem(this.storageKey) || localStorage.getItem('bumi_products_catalog');
 
     if (!existing || storedVersion !== DATA_VERSION) {
       // Fresh install OR version changed — load from config
-      localStorage.setItem(this.storageKey, JSON.stringify(BUMI_CONFIG.initialProducts));
+      localStorage.setItem(this.storageKey, JSON.stringify(cfg.initialProducts));
       localStorage.removeItem(this.configKey); // Reset any old cached store settings
-      localStorage.setItem('bumi_data_version', DATA_VERSION);
+      localStorage.removeItem('bumi_store_settings');
+      localStorage.setItem('boomi_data_version', DATA_VERSION);
     } else {
       try {
         const parsed = JSON.parse(existing);
         // Also refresh if old Unsplash images, incomplete data, or corrupted Tamil text
         const hasMojibake = parsed.length > 0 && parsed[0].nameTa && parsed[0].nameTa.includes('à®');
-        if (parsed.length < 172 || !parsed[0].image || hasMojibake) {
-          localStorage.setItem(this.storageKey, JSON.stringify(BUMI_CONFIG.initialProducts));
+        if (parsed.length < 172 || !parsed[0].image || hasMojibake || (parsed[0].productId && parsed[0].productId.startsWith('bumi-'))) {
+          localStorage.setItem(this.storageKey, JSON.stringify(cfg.initialProducts));
           localStorage.removeItem(this.configKey);
-          localStorage.setItem('bumi_data_version', DATA_VERSION);
+          localStorage.removeItem('bumi_store_settings');
+          localStorage.setItem('boomi_data_version', DATA_VERSION);
         }
       } catch (e) {
-        localStorage.setItem(this.storageKey, JSON.stringify(BUMI_CONFIG.initialProducts));
+        localStorage.setItem(this.storageKey, JSON.stringify(cfg.initialProducts));
         localStorage.removeItem(this.configKey);
-        localStorage.setItem('bumi_data_version', DATA_VERSION);
+        localStorage.removeItem('bumi_store_settings');
+        localStorage.setItem('boomi_data_version', DATA_VERSION);
       }
     }
   }
 
   // Retrieve store settings (name, phone, whatsapp, location)
   getStoreSettings() {
-    const custom = localStorage.getItem(this.configKey);
+    const cfg = this.getConfig();
+    const defaultStore = cfg ? cfg.store : {};
+    const custom = localStorage.getItem(this.configKey) || localStorage.getItem('bumi_store_settings');
     if (custom) {
       try {
-        return { ...BUMI_CONFIG.store, ...JSON.parse(custom) };
+        const parsed = JSON.parse(custom);
+        if (parsed.nameEn === 'Bumi Crackers') {
+          parsed.nameEn = 'Boomi Crackers';
+        }
+        return { ...defaultStore, ...parsed };
       } catch (e) {
-        return BUMI_CONFIG.store;
+        return defaultStore;
       }
     }
-    return BUMI_CONFIG.store;
+    return defaultStore;
   }
 
   // Update store settings
@@ -99,23 +116,26 @@ class BumiDataService {
   // Save custom Firebase config
   saveFirebaseConfig(newFbConfig) {
     localStorage.setItem(this.firebaseConfigKey, JSON.stringify(newFbConfig));
-    this.init();
+    return newFbConfig;
   }
 
+  // Retrieve saved Firebase config
   getFirebaseConfig() {
-    const custom = localStorage.getItem(this.firebaseConfigKey);
+    const cfg = this.getConfig();
+    const custom = localStorage.getItem(this.firebaseConfigKey) || localStorage.getItem('bumi_firebase_custom_config');
     if (custom) {
       try {
         return JSON.parse(custom);
       } catch (e) {
-        return BUMI_CONFIG.firebase;
+        return cfg ? cfg.firebase : {};
       }
     }
-    return BUMI_CONFIG.firebase;
+    return cfg ? cfg.firebase : {};
   }
 
   // Get all products (with optional filter for active only)
   async getProducts(activeOnly = false) {
+    const cfg = this.getConfig();
     if (this.isFirebaseReady && this.db) {
       try {
         let query = this.db.collection('products');
@@ -139,15 +159,18 @@ class BumiDataService {
 
     // Fallback to localStorage / initial data
     try {
+      const cfg = this.getConfig();
+      const initial = cfg ? cfg.initialProducts : [];
       const stored = localStorage.getItem(this.storageKey);
-      let products = stored ? JSON.parse(stored) : BUMI_CONFIG.initialProducts;
+      let products = stored ? JSON.parse(stored) : initial;
       if (activeOnly) {
         products = products.filter(p => p.isActive !== false);
       }
       return products;
     } catch (e) {
       console.error("Local data parse error", e);
-      return BUMI_CONFIG.initialProducts;
+      const cfg = this.getConfig();
+      return cfg ? cfg.initialProducts : [];
     }
   }
 
@@ -160,7 +183,7 @@ class BumiDataService {
   // Add new product
   async addProduct(product) {
     const newProduct = {
-      productId: product.productId || `bumi-${Date.now()}`,
+      productId: product.productId || `boomi-${Date.now()}`,
       name: product.name || 'New Cracker',
       nameTa: product.nameTa || '',
       price: Number(product.price) || 0,
@@ -242,12 +265,14 @@ class BumiDataService {
 
   // Reset / Seed defaults
   async resetToSeedData() {
-    localStorage.setItem(this.storageKey, JSON.stringify(BUMI_CONFIG.initialProducts));
+    const cfg = this.getConfig();
+    const initial = cfg ? cfg.initialProducts : [];
+    localStorage.setItem(this.storageKey, JSON.stringify(initial));
     
     if (this.isFirebaseReady && this.db) {
       try {
         const batch = this.db.batch();
-        BUMI_CONFIG.initialProducts.forEach(prod => {
+        initial.forEach(prod => {
           const docRef = this.db.collection('products').doc(prod.productId);
           batch.set(docRef, prod);
         });
@@ -256,9 +281,10 @@ class BumiDataService {
         console.warn("Could not batch write seed data to Firebase:", err);
       }
     }
-    return BUMI_CONFIG.initialProducts;
+    return initial;
   }
 }
 
-// Global instance
-window.bumiService = new BumiDataService();
+// Global instance (with backward-compatible alias)
+window.boomiService = new BoomiDataService();
+window.bumiService = window.boomiService;

@@ -1,9 +1,14 @@
 /**
- * Bumi Crackers - Admin Dashboard Script
+ * Boomi Crackers - Admin Dashboard Script
  * CRUD, Product status toggles, Image previews, and Store settings
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
+  const BOOMI_CONFIG = window.BOOMI_CONFIG || window.BOOMI_CONFIG;
+  const BOOMI_CONFIG = BOOMI_CONFIG;
+  const boomiService = window.boomiService || boomiService;
+  const bumiService = boomiService;
+
   // Elements
   const productsTableBody = document.getElementById('productsTableBody');
   const totalProductsCount = document.getElementById('totalProductsCount');
@@ -49,7 +54,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Populate Categories in Dropdowns
   function initCategories() {
-    const options = BUMI_CONFIG.categories.filter(c => c.id !== 'all').map(c => 
+    const options = BOOMI_CONFIG.categories.filter(c => c.id !== 'all').map(c => 
       `<option value="${c.id}">${c.icon} ${c.name} (${c.nameTa})</option>`
     ).join('');
 
@@ -62,7 +67,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load and Render Products
   async function loadAdminProducts() {
-    allProducts = await window.bumiService.getProducts(false);
+    allProducts = await boomiService.getProducts(false);
     updateStats();
     renderTable();
   }
@@ -71,7 +76,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (totalProductsCount) totalProductsCount.textContent = allProducts.length;
     const activeCount = allProducts.filter(p => p.isActive !== false).length;
     if (activeProductsCount) activeProductsCount.textContent = activeCount;
-    if (categoriesCount) categoriesCount.textContent = BUMI_CONFIG.categories.length - 1;
+    if (categoriesCount) categoriesCount.textContent = BOOMI_CONFIG.categories.length - 1;
   }
 
   function renderTable() {
@@ -107,7 +112,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     productsTableBody.innerHTML = filtered.map(product => {
-      const catObj = BUMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
+      const catObj = BOOMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
       const isActive = product.isActive !== false;
       const itemCode = product.itemNo ? `#${String(product.itemNo).padStart(3, '0')}` : '#001';
 
@@ -157,7 +162,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Toggle active status
   window.toggleProduct = async function(productId, newStatus) {
-    await window.bumiService.toggleProductStatus(productId, newStatus);
+    await boomiService.toggleProductStatus(productId, newStatus);
     showToast(newStatus ? 'Product activated' : 'Product disabled', 'success');
     await loadAdminProducts();
   };
@@ -165,7 +170,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Delete product
   window.deleteProduct = async function(productId) {
     if (confirm('Are you sure you want to delete this firecracker product from the catalogue?')) {
-      await window.bumiService.deleteProduct(productId);
+      await boomiService.deleteProduct(productId);
       showToast('Product deleted successfully', 'success');
       await loadAdminProducts();
     }
@@ -273,10 +278,10 @@ document.addEventListener('DOMContentLoaded', async () => {
       };
 
       if (id) {
-        await window.bumiService.updateProduct(id, productData);
+        await boomiService.updateProduct(id, productData);
         showToast('Product updated successfully!', 'success');
       } else {
-        await window.bumiService.addProduct(productData);
+        await boomiService.addProduct(productData);
         showToast('New product added to catalogue!', 'success');
       }
 
@@ -288,8 +293,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Settings Modal logic
   if (btnOpenSettings) {
     btnOpenSettings.addEventListener('click', () => {
-      const settings = window.bumiService.getStoreSettings();
-      const fb = window.bumiService.getFirebaseConfig();
+      const settings = boomiService.getStoreSettings();
+      const fb = boomiService.getFirebaseConfig();
 
       document.getElementById('settingsStoreNameTa').value = settings.name || '';
       document.getElementById('settingsStoreNameEn').value = settings.nameEn || '';
@@ -314,13 +319,13 @@ document.addEventListener('DOMContentLoaded', async () => {
         location: document.getElementById('settingsLocation').value.trim(),
       };
 
-      window.bumiService.saveStoreSettings(newSettings);
+      boomiService.saveStoreSettings(newSettings);
 
       const fbJsonText = document.getElementById('settingsFirebaseJson').value.trim();
       if (fbJsonText) {
         try {
           const fbConfig = JSON.parse(fbJsonText);
-          window.bumiService.saveFirebaseConfig(fbConfig);
+          boomiService.saveFirebaseConfig(fbConfig);
         } catch (err) {
           showToast('Invalid Firebase JSON format', 'error');
           return;
@@ -336,7 +341,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (btnSeedDefaults) {
     btnSeedDefaults.addEventListener('click', async () => {
       if (confirm('This will load/restore the full Sivakasi cracker collection (Sparklers, Chakkars, Pots, Shots, etc.). Continue?')) {
-        await window.bumiService.resetToSeedData();
+        await boomiService.resetToSeedData();
         showToast('Catalogue restored with initial Sivakasi products!', 'success');
         closeAllModals();
         await loadAdminProducts();

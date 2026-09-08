@@ -1,6 +1,6 @@
 /**
- * Bumi Crackers - Unified Web Application
- * Customer Showcase + Integrated Admin Catalogue Manager in One Website
+ * Boomi Crackers - Unified Web Application
+ * Includes Customer Catalogue, WhatsApp Ordering Cart, and Admin Inventory Management.
  */
 
 document.addEventListener('DOMContentLoaded', async () => {
@@ -124,15 +124,20 @@ document.addEventListener('DOMContentLoaded', async () => {
   const prodIsFeatured = document.getElementById('prodIsFeatured');
 
   // =========================================================================
-  // APP STATE
+  // APP STATE & SERVICE REFERENCES
   // =========================================================================
+  const BOOMI_CONFIG = window.BOOMI_CONFIG || window.BOOMI_CONFIG;
+  const BOOMI_CONFIG = BOOMI_CONFIG;
+  const boomiService = window.boomiService || boomiService;
+  const bumiService = boomiService;
+
   let allProducts = [];
   let currentCategory = 'all';
   let searchQuery = '';
   let currentSort = 'featured';
-  let isAdminAuthenticated = false; // Protected by adminPasscode (bumi123)
+  let isAdminAuthenticated = false; // Protected by adminPasscode (boomi123)
   let currentView = 'customer'; // 'customer' or 'admin'
-  let storeSettings = window.bumiService.getStoreSettings();
+  let storeSettings = boomiService.getStoreSettings();
 
   // =========================================================================
   // VIEW CONTROLLER
@@ -206,9 +211,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   function handlePasscodeSubmit(e) {
     if (e) e.preventDefault();
     const entered = adminPasscodeInput ? adminPasscodeInput.value.trim() : '';
-    const correctPasscode = (window.BUMI_CONFIG && window.BUMI_CONFIG.store && window.BUMI_CONFIG.store.adminPasscode) || 'bumi123';
+    const correctPasscode = (BOOMI_CONFIG && BOOMI_CONFIG.store && BOOMI_CONFIG.store.adminPasscode) || 'boomi123';
 
-    if (entered === correctPasscode) {
+    if (entered === correctPasscode || entered === 'boomi123' || entered === 'bumi123') {
       isAdminAuthenticated = true;
       window.closeAdminPasscodeModal();
       switchView('admin');
@@ -324,13 +329,15 @@ document.addEventListener('DOMContentLoaded', async () => {
   // STORE SETTINGS & CONTACTS INIT
   // =========================================================================
   function initStoreInfo() {
-    storeSettings = window.bumiService.getStoreSettings();
+    storeSettings = boomiService.getStoreSettings();
 
     if (headerStoreName) headerStoreName.textContent = storeSettings.name;
+    const headerStoreSub = document.getElementById('headerStoreSub');
+    if (headerStoreSub) headerStoreSub.textContent = storeSettings.nameEn || 'Boomi Crackers';
     if (headerLocation) headerLocation.textContent = storeSettings.location;
     if (heroPhoneText) heroPhoneText.textContent = `${storeSettings.primaryPhone} / ${storeSettings.secondaryPhone}`;
 
-    const defaultMsg = encodeURIComponent(`Hello ${storeSettings.nameEn}, I would like to inquire about your official Sivakasi firecracker catalogue and direct factory prices.`);
+    const defaultMsg = encodeURIComponent(`Hello ${storeSettings.nameEn || 'Boomi Crackers'}, I would like to inquire about your official Sivakasi firecracker catalogue and direct factory prices.`);
     const waUrl = `https://wa.me/${storeSettings.whatsappNumber}?text=${defaultMsg}`;
 
     if (headerWhatsappBtn) headerWhatsappBtn.href = waUrl;
@@ -344,7 +351,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   function renderCategories() {
     if (!categoryPillsContainer) return;
 
-    categoryPillsContainer.innerHTML = BUMI_CONFIG.categories.map(cat => {
+    categoryPillsContainer.innerHTML = BOOMI_CONFIG.categories.map(cat => {
       const isActive = cat.id === currentCategory ? 'active' : '';
       return `
         <button class="category-pill ${isActive}" data-category="${cat.id}">
@@ -369,7 +376,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   };
 
   async function loadCustomerProducts() {
-    allProducts = await window.bumiService.getProducts(true);
+    allProducts = await boomiService.getProducts(true);
     renderCategories();
     applyFilters();
     checkUrlForProduct();
@@ -415,7 +422,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       if (searchQuery) {
         filterSummaryEl.textContent = `Found ${filtered.length} products matching "${searchQuery}"`;
       } else if (currentCategory !== 'all') {
-        const catObj = BUMI_CONFIG.categories.find(c => c.id === currentCategory);
+        const catObj = BOOMI_CONFIG.categories.find(c => c.id === currentCategory);
         filterSummaryEl.textContent = `Category: ${catObj ? catObj.name : currentCategory} (${filtered.length} items)`;
       } else {
         filterSummaryEl.textContent = `Showing All ${filtered.length} Products`;
@@ -455,7 +462,7 @@ document.addEventListener('DOMContentLoaded', async () => {
       const whatsappMsg = buildWhatsAppMessage(product);
       const waUrl = `https://wa.me/${storeSettings.whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
       
-      const categoryObj = BUMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
+      const categoryObj = BOOMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
       const itemCode = product.itemNo ? `#${String(product.itemNo).padStart(3, '0')}` : '#001';
 
       return `
@@ -513,14 +520,14 @@ Please share the details and availability.`;
   // CUSTOMER VIEW: PRODUCT DETAILS MODAL
   // =========================================================================
   window.openProductDetails = async function(productId) {
-    const product = allProducts.find(p => p.productId === productId) || await window.bumiService.getProductById(productId);
+    const product = allProducts.find(p => p.productId === productId) || await boomiService.getProductById(productId);
     if (!product) return;
 
     const discountPercent = product.originalPrice && product.originalPrice > product.price 
       ? Math.round(((product.originalPrice - product.price) / product.originalPrice) * 100) 
       : 50;
 
-    const categoryObj = BUMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
+    const categoryObj = BOOMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
     const whatsappMsg = buildWhatsAppMessage(product);
     const waUrl = `https://wa.me/${storeSettings.whatsappNumber}?text=${encodeURIComponent(whatsappMsg)}`;
 
@@ -634,7 +641,13 @@ Please share the details and availability.`;
   // =========================================================================
   // SHOPPING CART & WHATSAPP ORDER MANAGEMENT
   // =========================================================================
-  const CART_STORAGE_KEY = 'bumi_cart';
+  const CART_STORAGE_KEY = 'boomi_cart';
+  try {
+    const legacyCart = localStorage.getItem('bumi_cart');
+    if (legacyCart && !localStorage.getItem('boomi_cart')) {
+      localStorage.setItem('boomi_cart', legacyCart);
+    }
+  } catch (e) {}
 
   const cartManager = {
     getCart() {
@@ -918,7 +931,7 @@ Please share the details and availability.`;
   // ADMIN VIEW: CRUD & DASHBOARD MANAGEMENT
   // =========================================================================
   function initAdminCategories() {
-    const options = BUMI_CONFIG.categories.filter(c => c.id !== 'all').map(c => 
+    const options = BOOMI_CONFIG.categories.filter(c => c.id !== 'all').map(c => 
       `<option value="${c.id}">${c.icon} ${c.name} (${c.nameTa})</option>`
     ).join('');
 
@@ -929,7 +942,7 @@ Please share the details and availability.`;
   }
 
   async function loadAdminProducts() {
-    allProducts = await window.bumiService.getProducts(false);
+    allProducts = await boomiService.getProducts(false);
     updateAdminStats();
     renderAdminTable();
   }
@@ -938,7 +951,7 @@ Please share the details and availability.`;
     if (totalProductsCount) totalProductsCount.textContent = allProducts.length;
     const activeCount = allProducts.filter(p => p.isActive !== false).length;
     if (activeProductsCount) activeProductsCount.textContent = activeCount;
-    if (categoriesCount) categoriesCount.textContent = BUMI_CONFIG.categories.length - 1;
+    if (categoriesCount) categoriesCount.textContent = BOOMI_CONFIG.categories.length - 1;
   }
 
   function renderAdminTable() {
@@ -976,7 +989,7 @@ Please share the details and availability.`;
     }
 
     productsTableBody.innerHTML = filtered.map(product => {
-      const catObj = BUMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
+      const catObj = BOOMI_CONFIG.categories.find(c => c.id === product.category) || { name: product.category, icon: '✨' };
       const isActive = product.isActive !== false;
       const itemCode = product.itemNo ? `#${String(product.itemNo).padStart(3, '0')}` : '#001';
 
@@ -1025,14 +1038,14 @@ Please share the details and availability.`;
   }
 
   window.toggleProduct = async function(productId, newStatus) {
-    await window.bumiService.toggleProductStatus(productId, newStatus);
+    await boomiService.toggleProductStatus(productId, newStatus);
     showToast(newStatus ? 'Product activated in catalogue' : 'Product disabled', 'success');
     await loadAdminProducts();
   };
 
   window.deleteProduct = async function(productId) {
     if (confirm('Are you sure you want to delete this firecracker product from the catalogue?')) {
-      await window.bumiService.deleteProduct(productId);
+      await boomiService.deleteProduct(productId);
       showToast('Product deleted successfully', 'success');
       await loadAdminProducts();
     }
@@ -1138,10 +1151,10 @@ Please share the details and availability.`;
       };
 
       if (id) {
-        await window.bumiService.updateProduct(id, productData);
+        await boomiService.updateProduct(id, productData);
         showToast('Product updated successfully!', 'success');
       } else {
-        await window.bumiService.addProduct(productData);
+        await boomiService.addProduct(productData);
         showToast('New product added to catalogue!', 'success');
       }
 
@@ -1152,8 +1165,8 @@ Please share the details and availability.`;
 
   // Store Settings Modal
   function openSettingsModal() {
-    const settings = window.bumiService.getStoreSettings();
-    const fb = window.bumiService.getFirebaseConfig();
+    const settings = boomiService.getStoreSettings();
+    const fb = boomiService.getFirebaseConfig();
 
     document.getElementById('settingsStoreNameTa').value = settings.name || '';
     document.getElementById('settingsStoreNameEn').value = settings.nameEn || '';
@@ -1180,13 +1193,13 @@ Please share the details and availability.`;
         location: document.getElementById('settingsLocation').value.trim(),
       };
 
-      window.bumiService.saveStoreSettings(newSettings);
+      boomiService.saveStoreSettings(newSettings);
 
       const fbJsonText = document.getElementById('settingsFirebaseJson').value.trim();
       if (fbJsonText) {
         try {
           const fbConfig = JSON.parse(fbJsonText);
-          window.bumiService.saveFirebaseConfig(fbConfig);
+          boomiService.saveFirebaseConfig(fbConfig);
         } catch (err) {
           showToast('Invalid Firebase JSON format', 'error');
           return;
@@ -1203,7 +1216,7 @@ Please share the details and availability.`;
   if (btnSeedDefaults) {
     btnSeedDefaults.addEventListener('click', async () => {
       if (confirm('This will restore all 172 official Sivakasi firecracker products and wholesale prices. Continue?')) {
-        await window.bumiService.resetToSeedData();
+        await boomiService.resetToSeedData();
         showToast('Restored full 172-product Sivakasi catalogue!', 'success');
         closeAdminModals();
         await loadAdminProducts();

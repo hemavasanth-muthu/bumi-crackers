@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Bumi Crackers - Local development server with proper UTF-8 charset headers.
+Boomi Crackers - Local development server with proper UTF-8 charset headers.
 Ensures Tamil Unicode text renders correctly in all browsers.
 """
 import http.server
@@ -76,7 +76,7 @@ class QuietHandler(http.server.SimpleHTTPRequestHandler):
 
 socketserver.TCPServer.allow_reuse_address = True
 
-print(f"\n🎆 Bumi Crackers Dev Server")
+print(f"\n🎆 Boomi Crackers Dev Server")
 print(f"   Serving: {DIRECTORY}")  
 print(f"   URL: http://localhost:{PORT}")
 print(f"   Tamil Unicode: UTF-8 charset headers enabled ✓")
