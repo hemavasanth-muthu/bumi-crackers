@@ -126,9 +126,8 @@ document.addEventListener('DOMContentLoaded', async () => {
   // =========================================================================
   // APP STATE & SERVICE REFERENCES
   // =========================================================================
-  const BOOMI_CONFIG = window.BOOMI_CONFIG || window.BOOMI_CONFIG;
-  const BOOMI_CONFIG = BOOMI_CONFIG;
-  const boomiService = window.boomiService || boomiService;
+  const BOOMI_CONFIG = window.BOOMI_CONFIG || window.BUMI_CONFIG;
+  const boomiService = window.boomiService || window.bumiService;
   const bumiService = boomiService;
 
   let allProducts = [];
