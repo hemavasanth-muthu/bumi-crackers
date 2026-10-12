@@ -57,7 +57,7 @@ class BoomiDataService {
     if (!cfg) return;
 
     // Version key — increment to force-refresh localStorage when images/data change
-    const DATA_VERSION = 'v6-boomi-brand';
+    const DATA_VERSION = 'v7-2026-price-update';
     const storedVersion = localStorage.getItem('boomi_data_version') || localStorage.getItem('bumi_data_version');
 
     const existing = localStorage.getItem(this.storageKey) || localStorage.getItem('bumi_products_catalog');
